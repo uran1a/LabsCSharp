@@ -1,10 +1,22 @@
 ﻿using System;
+using lab1;
 class Program
 {
     public static void Main(string[] args)
     {
         //task1();
-        task2();
+        //task2();
+        Person p1 = new Person("Nikita", "Zab", "Ser", 18, 1.5, 30000);
+        Console.WriteLine(p1.ToString());
+        Director d1 = new Director("Sergey", "Zab", "Pav", 45, 3.5, 130000, 3.0, 2);
+        Console.WriteLine(d1.ToString());
+        Guard g1 = new Guard("Вася", "Пупкин", "Петрович", 49, 15.0, 25000, "Орел");
+        Console.WriteLine(g1.ToString());
+        Accountant a1 = new Accountant("Вася", "Пупкин", "Петрович", 49, 15.0, 25000, 12.4);
+        Console.WriteLine(a1.ToString());
+        AdminBuild admin = new AdminBuild(d1, a1, g1);
+        admin.PrintStructOfCompany();
+
     }
     enum Coordinates : int { X1 = 0, Y1, X2, Y2, X3, Y3 }
     static void task1()
