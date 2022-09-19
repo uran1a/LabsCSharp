@@ -6,20 +6,9 @@ class Program
     {
         //task1();
         //task2();
-        Person p1 = new Person("Nikita", "Zab", "Ser", 18, 1.5, 30000);
-        Console.WriteLine(p1.ToString());
-        Director d1 = new Director("Sergey", "Zab", "Pav", 45, 3.5, 130000, 3.0, 2);
-        Console.WriteLine(d1.ToString());
-        Guard g1 = new Guard("Вася", "Пупкин", "Петрович", 49, 15.0, 25000, "Орел");
-        Console.WriteLine(g1.ToString());
-        Accountant a1 = new Accountant("Вася", "Пупкин", "Петрович", 49, 15.0, 25000, 12.4);
-        Console.WriteLine(a1.ToString());
-        AdminBuild admin = new AdminBuild(d1, a1, g1);
-        admin.PrintStructOfCompany();
-
     }
     enum Coordinates : int { X1 = 0, Y1, X2, Y2, X3, Y3 }
-    static void task1()
+    static void task1Subtask1()
     {
         Console.WriteLine("Введите x,y,z:");
         FindResultVariables(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), out double a, out double b);
@@ -31,7 +20,7 @@ class Program
             b = Math.Abs(y - 4) + (Math.Pow(y - x, 2) / 6) + (Math.Pow(x - y, 2) / 7);
         }
     }
-    static void task2()
+    static void task1Subtask2()
     {
         const int SIZE = 6;
         Console.WriteLine("Введите x1, y1, x2, y2, x3, y3: ");
@@ -56,5 +45,52 @@ class Program
         double Square = Math.Sqrt(Perimeter*(Perimeter-a)*(Perimeter-b)*(Perimeter-c));
         double Radius = (a * b * c) / (4 * Square);
         Console.WriteLine($"Радиус: {Radius}");
+    }
+    static void task1Subtask3()
+    {
+        Console.WriteLine("Введите число 1: ");
+        double a = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Введите число 2: ");
+        double b = Convert.ToDouble(Console.ReadLine());
+        double sum;
+        double proiz;
+        if (a != b)
+        {
+         sum = a + b;
+         proiz = a * b;
+         Console.WriteLine("Сумма введёных чисел: " + sum);
+         Console.WriteLine("Произведение введёных чисел: " + proiz);
+        }
+        else Console.WriteLine("Введите числа неравные друг другу");
+        Console.ReadKey();
+    }
+    static void task1Subtask4()
+    {
+        Console.WriteLine("Введите время суток:");
+        double vremya = Convert.ToDouble(Console.ReadLine());
+        if (vremya >= 0 && vremya <= 24)
+        {
+            Console.WriteLine("Время суток: " + vremya + ":00");
+        }
+        else Console.WriteLine("Введите значение из заданного промежутка");
+        Console.ReadKey();
+    }
+    static void task2()
+    {
+        Person p1 = new Person("Nikita", "Zab", "Ser", 18, 1.5, 30000);
+        Console.WriteLine(p1.ToString());
+        Director d1 = new Director("Sergey", "Zab", "Pav", 45, 3.5, 130000, 3.0, 2);
+        Console.WriteLine(d1.ToString());
+        Guard g1 = new Guard("Вася", "Пупкин", "Петрович", 49, 15.0, 25000, "Орел");
+        Console.WriteLine(g1.ToString());
+        Accountant a1 = new Accountant("Олег", "Петров", "Андреевич", 49, 15.0, 25000, 12.4);
+        Console.WriteLine(a1.ToString());
+        AdminBuild admin = new AdminBuild(d1, a1, g1);
+        Employee e1 = new("Женя", "Клубника", ":0", 31, 3.0, 45000, "SMM", "Sber");
+        Employee e2 = new("Алексей", "Дыня", ":)", 33, 1.0, 15000, "Юридический", "Яндекс");
+        List<Employee> listEmployee = new List<Employee>() { e1, e2, };
+        admin.AddEmployee(listEmployee);
+        admin.DeleteEmployee();
+        admin.PrintStructOfCompany();
     }
 }

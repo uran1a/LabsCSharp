@@ -25,13 +25,13 @@ namespace lab1
         {
             if (employees.Count == 0) { Console.WriteLine("В компании нет сотрудников"); return; }
             for (int i = 0; i < employees.Count; i++)
-                Console.WriteLine(i+")"+employees[i].ToString());
+                Console.WriteLine((i+1)+") "+employees[i].ToString());
         }
         public void DeleteEmployee()
         {
             this.PrintListEmployees();
             Console.WriteLine("Введите номер сотрудника для увольнения:");
-            int index = Convert.ToInt32(Console.ReadLine());
+            int index = Convert.ToInt32(Console.ReadLine()); //проверку на индекс
             employees.RemoveAt(index);
         }
         public void ChangeDirector(Director directorNew) => this.director = directorNew;
