@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace lab1
 {
-    class AdminBuild
+    public class Company
     {
-        Director director;
-        Accountant accountant;
-        Guard guard;
+        //Название компании
+        public Director director { get; set; }
+        public Accountant accountant { get; set; }
+        public Guard guard { get; set; }
         List<Employee> employees;
-        public AdminBuild(Director d, Accountant a, Guard g)
+        public Company(Director d, Accountant a, Guard g)
         {
             director = d;
             accountant = a;
@@ -49,7 +50,7 @@ namespace lab1
             this.PrintListEmployees();
         }
     }
-    class Director : Person
+    public class Director : Person
     {
         private double experienceInManagent;
         private int countOfOtherCompanies;
@@ -58,24 +59,24 @@ namespace lab1
             this.experienceInManagent = experienceInManagent;
             this.countOfOtherCompanies = countOfOtherCompanies;
         }
-        public string ToString()
+        public override string ToString()
         {
             return (base.ToString() + $"Опыт в руководстве: {experienceInManagent} Кол-во других компаний: {countOfOtherCompanies}");
         }
     }
-    class Guard : Person
+    public class Guard : Person
     {
         private string titleSecurityCompany;
         public Guard(string name, string surname, string patronymic, int age, double experience, int salaty, string titleSecurityCompany) : base(name, surname, patronymic, age, experience, salaty)
         {
             this.titleSecurityCompany = titleSecurityCompany;
         }
-        public string ToString()
+        public override string ToString()
         {
             return (base.ToString() + $"Название охранной компании: {titleSecurityCompany}");
         }
     }
-    class Employee : Person
+    public class Employee : Person
     {
         private string department;
         private string formerPlaceOfWork;
@@ -84,24 +85,24 @@ namespace lab1
             this.department = department;
             this.formerPlaceOfWork = formerPlaceOfWork;
         }
-        public string ToString()
+        public override string ToString()
         {
             return (base.ToString() + $"Отдел: {department} Бывшее место работы: {formerPlaceOfWork}");
         }
     }
-    class Accountant : Person
+    public class Accountant : Person
     {
         private double experienceUsing1С;
         public Accountant(string name, string surname, string patronymic, int age, double experience, int salaty, double experienceUsing1C) : base(name, surname, patronymic, age, experience, salaty)
         {
             this.experienceUsing1С = experienceUsing1C;
         }
-        public string ToString()
+        public override string ToString()
         {
             return (base.ToString() + $"Опыт использования 1С: {experienceUsing1С}");
         }
     }
-    class Person
+    public class Person
     {
         private string name;
         private string surname;
@@ -120,7 +121,11 @@ namespace lab1
             this.experience = experience;
             this.salaty = salaty;
         }
-        public string ToString()
+        public string PrintFIO()
+        {
+            return ($"{surname} {name} {patronymic}");
+        }
+        public virtual string ToString()
         {
             return ($"Имя: {name} Фамилия: {surname} Отчество: {patronymic} Возраст: {Age} Должность: {post} Стаж: {experience} Зарплата: {salaty} ");
         }

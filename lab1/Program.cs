@@ -1,6 +1,6 @@
 ﻿using System;
 using lab1;
-class Program
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -85,7 +85,7 @@ class Program
         Console.WriteLine(g1.ToString());
         Accountant a1 = new Accountant("Олег", "Петров", "Андреевич", 49, 15.0, 25000, 12.4);
         Console.WriteLine(a1.ToString());
-        AdminBuild admin = new AdminBuild(d1, a1, g1);
+        Company admin = new Company(d1, a1, g1);
         Employee e1 = new("Женя", "Клубника", ":0", 31, 3.0, 45000, "SMM", "Sber");
         Employee e2 = new("Алексей", "Дыня", ":)", 33, 1.0, 15000, "Юридический", "Яндекс");
         List<Employee> listEmployee = new List<Employee>() { e1, e2, };
