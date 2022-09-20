@@ -9,10 +9,10 @@ namespace lab1
     public class Company
     {
         //Название компании
-        public Director director { get; set; }
+        public Director director;
         public Accountant accountant { get; set; }
         public Guard guard { get; set; }
-        List<Employee> employees;
+        public List<Employee> employees { get; set; }
         public Company(Director d, Accountant a, Guard g)
         {
             director = d;
@@ -52,8 +52,8 @@ namespace lab1
     }
     public class Director : Person
     {
-        private double experienceInManagent;
-        private int countOfOtherCompanies;
+        public double experienceInManagent { get; }
+        public int countOfOtherCompanies { get; }
         public Director(string name, string surname, string patronymic, int age, double experience, int salaty, double experienceInManagent, int countOfOtherCompanies) : base(name, surname, patronymic, age, experience, salaty)
         {
             this.experienceInManagent = experienceInManagent;
@@ -78,8 +78,8 @@ namespace lab1
     }
     public class Employee : Person
     {
-        private string department;
-        private string formerPlaceOfWork;
+        public string department { get; }
+        public string formerPlaceOfWork { get; }
         public Employee(string name, string surname, string patronymic, int age, double experience, int salaty, string department, string formerPlaceOfWork) : base(name, surname, patronymic, age, experience, salaty)
         {
             this.department = department;
@@ -107,16 +107,16 @@ namespace lab1
         private string name;
         private string surname;
         private string patronymic;
-        private int Age { get; set; } //проверку на возраст
-        private string post;
-        private double experience;
-        private int salaty;
+        public int age { get; } //проверку на возраст
+        public string post { get; } //проверку на возраст
+        public double experience { get; } //проверку на возраст
+        public int salaty { get; } //проверку на возраст
         public Person (string name, string surname, string patronymic, int age, double experience, int salaty)
         {
             this.name = name;
             this.surname = surname;
             this.patronymic = patronymic;
-            Age = age;
+            this.age = age;
             this.post = Convert.ToString(GetType()).Split('.')[1];
             this.experience = experience;
             this.salaty = salaty;
@@ -127,7 +127,7 @@ namespace lab1
         }
         public virtual string ToString()
         {
-            return ($"Имя: {name} Фамилия: {surname} Отчество: {patronymic} Возраст: {Age} Должность: {post} Стаж: {experience} Зарплата: {salaty} ");
+            return ($"Имя: {name} Фамилия: {surname} Отчество: {patronymic} Возраст: {age} Должность: {post} Стаж: {experience} Зарплата: {salaty} ");
         }
     }
 }

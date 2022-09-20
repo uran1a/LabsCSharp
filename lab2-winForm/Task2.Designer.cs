@@ -35,6 +35,11 @@
             this.labelDirectorCompany = new System.Windows.Forms.Label();
             this.labelAccountentCompany = new System.Windows.Forms.Label();
             this.labelDGuardCompany = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listViewEmployees = new System.Windows.Forms.ListView();
+            this.buttonChangeDirectorCompany = new System.Windows.Forms.Button();
+            this.buttonChangeGuardCompany = new System.Windows.Forms.Button();
+            this.buttonAccountantCompany = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitleCompany
@@ -119,12 +124,68 @@
             this.labelDGuardCompany.Text = "ФИО";
             this.labelDGuardCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(12, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 35);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Сотрудники";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listViewEmployees
+            // 
+            this.listViewEmployees.Location = new System.Drawing.Point(12, 280);
+            this.listViewEmployees.Name = "listViewEmployees";
+            this.listViewEmployees.Size = new System.Drawing.Size(776, 321);
+            this.listViewEmployees.TabIndex = 8;
+            this.listViewEmployees.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonChangeDirectorCompany
+            // 
+            this.buttonChangeDirectorCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonChangeDirectorCompany.Location = new System.Drawing.Point(569, 104);
+            this.buttonChangeDirectorCompany.Name = "buttonChangeDirectorCompany";
+            this.buttonChangeDirectorCompany.Size = new System.Drawing.Size(143, 37);
+            this.buttonChangeDirectorCompany.TabIndex = 9;
+            this.buttonChangeDirectorCompany.Text = "Изменить";
+            this.buttonChangeDirectorCompany.UseVisualStyleBackColor = true;
+            this.buttonChangeDirectorCompany.Click += new System.EventHandler(this.buttonChangeDirectorCompany_Click);
+            // 
+            // buttonChangeGuardCompany
+            // 
+            this.buttonChangeGuardCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonChangeGuardCompany.Location = new System.Drawing.Point(569, 190);
+            this.buttonChangeGuardCompany.Name = "buttonChangeGuardCompany";
+            this.buttonChangeGuardCompany.Size = new System.Drawing.Size(143, 37);
+            this.buttonChangeGuardCompany.TabIndex = 10;
+            this.buttonChangeGuardCompany.Text = "Изменить";
+            this.buttonChangeGuardCompany.UseVisualStyleBackColor = true;
+            // 
+            // buttonAccountantCompany
+            // 
+            this.buttonAccountantCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAccountantCompany.Location = new System.Drawing.Point(569, 147);
+            this.buttonAccountantCompany.Name = "buttonAccountantCompany";
+            this.buttonAccountantCompany.Size = new System.Drawing.Size(143, 37);
+            this.buttonAccountantCompany.TabIndex = 11;
+            this.buttonAccountantCompany.Text = "Изменить";
+            this.buttonAccountantCompany.UseVisualStyleBackColor = true;
+            // 
             // Task2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 613);
+            this.Controls.Add(this.buttonAccountantCompany);
+            this.Controls.Add(this.buttonChangeGuardCompany);
+            this.Controls.Add(this.buttonChangeDirectorCompany);
+            this.Controls.Add(this.listViewEmployees);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDGuardCompany);
             this.Controls.Add(this.labelAccountentCompany);
             this.Controls.Add(this.labelDirectorCompany);
@@ -134,6 +195,7 @@
             this.Controls.Add(this.labelTitleCompany);
             this.Name = "Task2";
             this.Text = "Task2";
+            this.Activated += new System.EventHandler(this.Task2_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +210,10 @@
         private Label labelDirectorCompany;
         private Label labelAccountentCompany;
         private Label labelDGuardCompany;
+        private Label label4;
+        private ListView listViewEmployees;
+        private Button buttonChangeDirectorCompany;
+        private Button buttonChangeGuardCompany;
+        private Button buttonAccountantCompany;
     }
 }
