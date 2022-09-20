@@ -35,17 +35,13 @@ namespace lab2_winForm
             Director d3 = new Director("Богдан", "Куликов", "Максимович", 43, 2.0, 25000, 20.0, 4);
             possibleDirectors = new List<Director>() { d1, d2, d3 };
 
-            //
             listViewEmployees.View = View.Details;
-            // Add a column with width 20 and left alignment.
             listViewEmployees.Columns.Clear();
             listViewEmployees.Columns.Add("#", 21, HorizontalAlignment.Center);
             listViewEmployees.Columns.Add("ФИО", 180, HorizontalAlignment.Center);
             listViewEmployees.Columns.Add("Отдел", 175, HorizontalAlignment.Center);
 
             listViewEmployees.FullRowSelect = true;
-            
-            //listViewEmployees.Clear();
 
             for (int i = 0; i < company.employees.Count; i++)
             {
@@ -61,9 +57,9 @@ namespace lab2_winForm
         private void buttonChangeDirectorCompany_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            Console.WriteLine(button.Name);
             ChangeEmployeeCompany form = new ChangeEmployeeCompany(ref possibleDirectors, ref company.director);
-            form.Show();
+            form.ShowDialog();
+            company.director = form.DirectorNew;
         }
 
         private void Task2_Activated(object sender, EventArgs e)

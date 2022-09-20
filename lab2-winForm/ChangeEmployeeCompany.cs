@@ -12,6 +12,7 @@ namespace lab2_winForm
 {
     public partial class ChangeEmployeeCompany : Form
     {
+        public Director DirectorNew { get => this.currentDirector;}
         List<Director> list;
         Director currentDirector;
         public ChangeEmployeeCompany(ref List<Director> list,ref Director currentDirector)
@@ -42,22 +43,14 @@ namespace lab2_winForm
                 newItem.SubItems.Add(Companies);
                 listViewChangeEmployeeCompany.Items.AddRange(new ListViewItem[] { newItem });
             }
-
         }
         private void buttonChangeEmployeeCompany_Click(object sender, EventArgs e)
         {
             int index = Convert.ToInt32(listViewChangeEmployeeCompany.FocusedItem.SubItems[0].Text) - 1;
-            //Console.WriteLine(list[index-1].PrintFIO());
-            Director newDirector = list[index]; //Алиса
+            Director newDirector = list[index];
             list.RemoveAt(index);
             list.Add(currentDirector);
-            Console.WriteLine(currentDirector.PrintFIO());
             currentDirector = newDirector;
-            Console.WriteLine(currentDirector.PrintFIO());
-            foreach (Director d in list)
-                Console.WriteLine(d.PrintFIO());
-            //list.Remove();
-
         }
     }
 }
