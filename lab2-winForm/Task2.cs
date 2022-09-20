@@ -35,7 +35,16 @@ namespace lab2_winForm
             Director d3 = new Director("Богдан", "Куликов", "Максимович", 43, 2.0, 25000, 20.0, 4);
             possibleDirectors = new List<Director>() { d1, d2, d3 };
 
-            //
+            Accountant a1 = new Accountant("Вероника", "Орлова", "Станиславовна", 30, 11.0, 25000, 13.0);
+            Accountant a2 = new Accountant("Александра", "Дубровина", "Максимовна", 35, 16.0, 25000, 7.0);
+            Accountant a3 = new Accountant("Елизавета", "Одинцова", "Николаевна", 21, 2.0, 25000, 3.0);
+            possibleAccountants = new List<Accountant>() { a1, a2, a3 };
+
+            Guard g1 = new Guard("Богдан", "Иванов", "Ильич", 51, 11.0, 15000, "Орёл");
+            Guard g2 = new Guard("Марк", "Ефимов", "Максимович", 53, 14.0, 20000, "Омон");
+            Guard g3 = new Guard("Иван", "Малышев", "Иванович", 55, 16.0, 25000, "Русь");
+            possibleGuards = new List<Guard>() { g1, g2, g3 };
+            
             listViewEmployees.View = View.Details;
             // Add a column with width 20 and left alignment.
             listViewEmployees.Columns.Clear();
@@ -60,10 +69,9 @@ namespace lab2_winForm
         }
         private void buttonChangeDirectorCompany_Click(object sender, EventArgs e)
         {
-            var button = (Button)sender;
-            Console.WriteLine(button.Name);
-            ChangeEmployeeCompany form = new ChangeEmployeeCompany(ref possibleDirectors, ref company.director);
-            form.Show();
+            ChangeEmployeeCompany<Director> change = new ChangeEmployeeCompany<Director>(ref possibleDirectors, ref company.director);
+            change.ShowDialog();
+            company.director = change.returnEmployee;
         }
 
         private void Task2_Activated(object sender, EventArgs e)
@@ -73,6 +81,20 @@ namespace lab2_winForm
             labelDirectorCompany.Text = company.director.PrintFIO();
             labelAccountentCompany.Text = company.accountant.PrintFIO();
             labelDGuardCompany.Text = company.guard.PrintFIO();
+        }
+
+        private void buttonAccountantCompany_Click(object sender, EventArgs e)
+        {
+            ChangeEmployeeCompany<Accountant> change = new ChangeEmployeeCompany<Accountant>(ref possibleAccountants, ref company.accountant);
+            change.ShowDialog();
+            company.accountant = change.returnEmployee;
+        }
+
+        private void buttonChangeGuardCompany_Click(object sender, EventArgs e)
+        {
+            ChangeEmployeeCompany<Guard> change = new ChangeEmployeeCompany<Guard>(ref possibleGuards, ref company.guard);
+            change.ShowDialog();
+            company.guard = change.returnEmployee;
         }
     }
 }

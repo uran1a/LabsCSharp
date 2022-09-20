@@ -10,8 +10,8 @@ namespace lab1
     {
         //Название компании
         public Director director;
-        public Accountant accountant { get; set; }
-        public Guard guard { get; set; }
+        public Accountant accountant;
+        public Guard guard;
         public List<Employee> employees { get; set; }
         public Company(Director d, Accountant a, Guard g)
         {

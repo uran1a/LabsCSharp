@@ -164,6 +164,7 @@
             this.buttonChangeGuardCompany.TabIndex = 10;
             this.buttonChangeGuardCompany.Text = "Изменить";
             this.buttonChangeGuardCompany.UseVisualStyleBackColor = true;
+            this.buttonChangeGuardCompany.Click += new System.EventHandler(this.buttonChangeGuardCompany_Click);
             // 
             // buttonAccountantCompany
             // 
@@ -174,6 +175,7 @@
             this.buttonAccountantCompany.TabIndex = 11;
             this.buttonAccountantCompany.Text = "Изменить";
             this.buttonAccountantCompany.UseVisualStyleBackColor = true;
+            this.buttonAccountantCompany.Click += new System.EventHandler(this.buttonAccountantCompany_Click);
             // 
             // Task2
             // 
