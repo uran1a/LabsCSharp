@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lab2
+namespace lab2_winForm.Task1
 {
-    public partial class StartForm : Form
+    public partial class Task1 : Form
     {
-        public StartForm()
+        public Task1()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Task2 task2 = new Task2();
-            task2.Show();
         }
     }
 }
