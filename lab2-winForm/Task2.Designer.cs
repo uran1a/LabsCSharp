@@ -40,6 +40,8 @@
             this.buttonChangeDirectorCompany = new System.Windows.Forms.Button();
             this.buttonChangeGuardCompany = new System.Windows.Forms.Button();
             this.buttonAccountantCompany = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
+            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitleCompany
@@ -177,16 +179,37 @@
             this.buttonAccountantCompany.UseVisualStyleBackColor = true;
             this.buttonAccountantCompany.Click += new System.EventHandler(this.buttonAccountantCompany_Click);
             // 
+            // buttonAddEmployee
+            // 
+            this.buttonAddEmployee.Location = new System.Drawing.Point(12, 615);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(143, 37);
+            this.buttonAddEmployee.TabIndex = 12;
+            this.buttonAddEmployee.Text = "Добавить";
+            this.buttonAddEmployee.UseVisualStyleBackColor = true;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
+            // 
+            // buttonDeleteEmployee
+            // 
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(161, 615);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(143, 37);
+            this.buttonDeleteEmployee.TabIndex = 13;
+            this.buttonDeleteEmployee.Text = "Удалить";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
+            // 
             // Task2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 613);
+            this.ClientSize = new System.Drawing.Size(800, 664);
+            this.Controls.Add(this.buttonDeleteEmployee);
+            this.Controls.Add(this.buttonAddEmployee);
             this.Controls.Add(this.buttonAccountantCompany);
             this.Controls.Add(this.buttonChangeGuardCompany);
             this.Controls.Add(this.buttonChangeDirectorCompany);
-            this.Controls.Add(this.listViewEmployees);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDGuardCompany);
             this.Controls.Add(this.labelAccountentCompany);
@@ -195,6 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTitleCompany);
+            this.Controls.Add(this.listViewEmployees);
             this.Name = "Task2";
             this.Text = "Task2";
             this.Activated += new System.EventHandler(this.Task2_Activated);
@@ -217,5 +241,7 @@
         private Button buttonChangeDirectorCompany;
         private Button buttonChangeGuardCompany;
         private Button buttonAccountantCompany;
+        private Button buttonAddEmployee;
+        private Button buttonDeleteEmployee;
     }
 }

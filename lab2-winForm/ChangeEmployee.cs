@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using lab1;
 namespace lab2_winForm
 {
-    public partial class ChangeEmployeeCompany<T> : Form where T : Person
+    public partial class ChangeEmployee<T> : Form where T : Person
     {
         public T returnEmployee { get => this.currentDirector; }
         List<T> list;
         T currentDirector;
-        public ChangeEmployeeCompany(ref List<T> list,ref T currentDirector)
+        public ChangeEmployee(ref List<T> list,ref T currentDirector)
         {
             InitializeComponent();
 
