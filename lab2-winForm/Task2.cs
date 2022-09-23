@@ -52,7 +52,7 @@ namespace lab2_winForm
                 newItem.SubItems.Add(Password);
                 listViewEmployees.Items.AddRange(new ListViewItem[] { newItem });
             }
-
+            //
         }
         private void buttonChangeDirectorCompany_Click(object sender, EventArgs e)
         {
