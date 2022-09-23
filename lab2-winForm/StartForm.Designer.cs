@@ -54,6 +54,7 @@
             this.buttonTask1.TabIndex = 1;
             this.buttonTask1.Text = "Задание №1";
             this.buttonTask1.UseVisualStyleBackColor = true;
+            this.buttonTask1.Click += new System.EventHandler(this.buttonTask1_Click);
             // 
             // buttonTask2
             // 
