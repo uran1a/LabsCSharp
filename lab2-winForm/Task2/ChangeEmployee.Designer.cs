@@ -1,6 +1,6 @@
 ﻿namespace lab2_winForm
 {
-    partial class ChangeEmployeeCompany
+    partial class ChangeEmployee<T>
     {
         /// <summary>
         /// Required designer variable.

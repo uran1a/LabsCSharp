@@ -9,12 +9,14 @@ namespace lab1
     public class Company
     {
         //Название компании
+        public string title { get; }
         public Director director;
-        public Accountant accountant { get; set; }
-        public Guard guard { get; set; }
-        public List<Employee> employees { get; set; }
-        public Company(Director d, Accountant a, Guard g)
+        public Accountant accountant;
+        public Guard guard;
+        public List<Employee> employees;
+        public Company(string title, Director d, Accountant a, Guard g)
         {
+            this.title = title;
             director = d;
             accountant = a;
             guard = g;
