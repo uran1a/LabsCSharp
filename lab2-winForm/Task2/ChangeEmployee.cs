@@ -15,11 +15,7 @@ namespace lab2_winForm
         public T returnEmployee { get => this.currentDirector; }
         List<T> list;
         T currentDirector;
-        public ChangeEmployee(ref List<T> list,ref T currentDirector)
-        public Director DirectorNew { get => this.currentDirector;}
-        List<Director> list;
-        Director currentDirector;
-        public ChangeEmployeeCompany(ref List<Director> list,ref Director currentDirector)
+        public ChangeEmployee(ref List<T> list, ref T currentDirector)
         {
             InitializeComponent();
 
@@ -44,12 +40,9 @@ namespace lab2_winForm
         {
             int index = Convert.ToInt32(listViewChangeEmployeeCompany.FocusedItem.SubItems[0].Text) - 1;
             T newDirector = list[index];
-            Director newDirector = list[index];
             list.RemoveAt(index);
             list.Add(this.currentDirector);
             this.currentDirector = newDirector;
-            list.Add(currentDirector);
-            currentDirector = newDirector;
         }
     }
 }

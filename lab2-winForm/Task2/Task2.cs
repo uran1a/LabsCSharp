@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using lab1;
+
 namespace lab2_winForm
 {
     public partial class Task2 : Form
@@ -75,10 +76,6 @@ namespace lab2_winForm
             ChangeEmployee<Guard> change = new ChangeEmployee<Guard>(ref possibleGuards, ref company.guard);
             change.ShowDialog();
             company.guard = change.returnEmployee;
-            var button = (Button)sender;
-            ChangeEmployeeCompany form = new ChangeEmployeeCompany(ref possibleDirectors, ref company.director);
-            form.ShowDialog();
-            company.director = form.DirectorNew;
         }
         private void Task2_Activated(object sender, EventArgs e)
         {
