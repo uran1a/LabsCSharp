@@ -514,6 +514,7 @@
             this.ClientSize = new System.Drawing.Size(646, 356);
             this.Controls.Add(this.tabControl1);
             this.Name = "Task1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

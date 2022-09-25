@@ -64,28 +64,30 @@ namespace lab2_winForm
             ChangeEmployee<Director> change = new ChangeEmployee<Director>(ref possibleDirectors, ref company.director);
             change.ShowDialog();
             company.director = change.returnEmployee;
+            labelDirectorCompany.Text = company.director.PrintFIO();
         }
         private void buttonAccountantCompany_Click(object sender, EventArgs e)
         {
             ChangeEmployee<Accountant> change = new ChangeEmployee<Accountant>(ref possibleAccountants, ref company.accountant);
             change.ShowDialog();
             company.accountant = change.returnEmployee;
+            labelAccountentCompany.Text = company.accountant.PrintFIO();
         }
         private void buttonChangeGuardCompany_Click(object sender, EventArgs e)
         {
             ChangeEmployee<Guard> change = new ChangeEmployee<Guard>(ref possibleGuards, ref company.guard);
             change.ShowDialog();
             company.guard = change.returnEmployee;
+            labelGuardCompany.Text = company.guard.PrintFIO();
         }
         private void Task2_Activated(object sender, EventArgs e)
         {
-            Console.WriteLine("Форма активна!");
-            Console.WriteLine($"Директор {company.director.PrintFIO()}");
             labelTitleCompany.Text = company.title;
             labelDirectorCompany.Text = company.director.PrintFIO();
             labelAccountentCompany.Text = company.accountant.PrintFIO();
-            labelDGuardCompany.Text = company.guard.PrintFIO();
+            labelGuardCompany.Text = company.guard.PrintFIO();
             ReloadListView();
+            
         }
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {

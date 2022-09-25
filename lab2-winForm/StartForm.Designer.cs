@@ -77,6 +77,7 @@
             this.Controls.Add(this.buttonTask1);
             this.Controls.Add(this.label1);
             this.Name = "StartForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Стартовая панель";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -26,21 +26,17 @@ namespace lab2_winForm
 
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {   
-            /*
-            for (int i = 0; i < checkedListBoxEmployees.CheckedItems.Count; i++)
-                Console.WriteLine(checkedListBoxEmployees.CheckedItems[i].ToString());
-            */
             if(checkedListBoxEmployees.CheckedItems.Count > 0)
             {
                 for (int i = 0; i < checkedListBoxEmployees.CheckedItems.Count; i++)
                     for(int j = 0; j < possibleEmployees.Count; j++)
                         if(checkedListBoxEmployees.CheckedItems[i].ToString() == possibleEmployees[j].PrintFIO())
                         {
-                            //Console.WriteLine(possibleEmployees[j].PrintFIO());
                             employees.Add(possibleEmployees[j]);
                             possibleEmployees.RemoveAt(j);
                         }
             }
+            this.Close();
         }
     }
 

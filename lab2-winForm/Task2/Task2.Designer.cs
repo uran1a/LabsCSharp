@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelDirectorCompany = new System.Windows.Forms.Label();
             this.labelAccountentCompany = new System.Windows.Forms.Label();
-            this.labelDGuardCompany = new System.Windows.Forms.Label();
+            this.labelGuardCompany = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.listViewEmployees = new System.Windows.Forms.ListView();
             this.buttonChangeDirectorCompany = new System.Windows.Forms.Button();
@@ -114,17 +114,17 @@
             this.labelAccountentCompany.Text = "ФИО";
             this.labelAccountentCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelDGuardCompany
+            // labelGuardCompany
             // 
-            this.labelDGuardCompany.AutoSize = true;
-            this.labelDGuardCompany.BackColor = System.Drawing.Color.White;
-            this.labelDGuardCompany.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDGuardCompany.Location = new System.Drawing.Point(146, 195);
-            this.labelDGuardCompany.Name = "labelDGuardCompany";
-            this.labelDGuardCompany.Size = new System.Drawing.Size(71, 35);
-            this.labelDGuardCompany.TabIndex = 6;
-            this.labelDGuardCompany.Text = "ФИО";
-            this.labelDGuardCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGuardCompany.AutoSize = true;
+            this.labelGuardCompany.BackColor = System.Drawing.Color.White;
+            this.labelGuardCompany.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGuardCompany.Location = new System.Drawing.Point(146, 195);
+            this.labelGuardCompany.Name = "labelGuardCompany";
+            this.labelGuardCompany.Size = new System.Drawing.Size(71, 35);
+            this.labelGuardCompany.TabIndex = 6;
+            this.labelGuardCompany.Text = "ФИО";
+            this.labelGuardCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -211,7 +211,7 @@
             this.Controls.Add(this.buttonChangeGuardCompany);
             this.Controls.Add(this.buttonChangeDirectorCompany);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelDGuardCompany);
+            this.Controls.Add(this.labelGuardCompany);
             this.Controls.Add(this.labelAccountentCompany);
             this.Controls.Add(this.labelDirectorCompany);
             this.Controls.Add(this.label3);
@@ -220,6 +220,7 @@
             this.Controls.Add(this.labelTitleCompany);
             this.Controls.Add(this.listViewEmployees);
             this.Name = "Task2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task2";
             this.Activated += new System.EventHandler(this.Task2_Activated);
             this.ResumeLayout(false);
@@ -235,7 +236,7 @@
         private Label label3;
         private Label labelDirectorCompany;
         private Label labelAccountentCompany;
-        private Label labelDGuardCompany;
+        private Label labelGuardCompany;
         private Label label4;
         private ListView listViewEmployees;
         private Button buttonChangeDirectorCompany;

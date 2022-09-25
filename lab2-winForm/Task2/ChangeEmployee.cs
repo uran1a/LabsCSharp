@@ -43,6 +43,7 @@ namespace lab2_winForm
             list.RemoveAt(index);
             list.Add(this.currentDirector);
             this.currentDirector = newDirector;
+            this.Close();
         }
     }
 }
