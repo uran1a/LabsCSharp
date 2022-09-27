@@ -1,4 +1,4 @@
-namespace labs_launcher
+namespace launcher
 {
     internal static class Program
     {

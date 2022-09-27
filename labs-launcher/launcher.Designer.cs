@@ -1,4 +1,4 @@
-﻿namespace labs_launcher
+﻿namespace launcher
 {
     partial class launcher
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listViewLabs = new System.Windows.Forms.ListView();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.listViewLabs = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,24 +46,6 @@
             this.panel1.Size = new System.Drawing.Size(502, 323);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(74, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Лабораторные работы";
-            // 
-            // listViewLabs
-            // 
-            this.listViewLabs.Location = new System.Drawing.Point(22, 49);
-            this.listViewLabs.Name = "listViewLabs";
-            this.listViewLabs.Size = new System.Drawing.Size(460, 204);
-            this.listViewLabs.TabIndex = 1;
-            this.listViewLabs.UseCompatibleStateImageBehavior = false;
-            // 
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -73,6 +55,25 @@
             this.buttonStart.TabIndex = 2;
             this.buttonStart.Text = "Запуск";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // listViewLabs
+            // 
+            this.listViewLabs.Location = new System.Drawing.Point(22, 49);
+            this.listViewLabs.Name = "listViewLabs";
+            this.listViewLabs.Size = new System.Drawing.Size(460, 204);
+            this.listViewLabs.TabIndex = 1;
+            this.listViewLabs.UseCompatibleStateImageBehavior = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(74, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Лабораторные работы";
             // 
             // launcher
             // 

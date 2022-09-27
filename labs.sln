@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console", "console", "{7765
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "winForm", "winForm", "{5ADBBD66-39F0-45CF-B338-C49FF0A4246F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "labs-launcher", "labs-launcher", "{2B35AC41-3BA1-4515-B42C-17C3FF98EA5B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "launcher", "launcher", "{2B35AC41-3BA1-4515-B42C-17C3FF98EA5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labs-launcher", "labs-launcher\labs-launcher.csproj", "{B23D77B2-EA4F-460D-8F04-C98748CCBD99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "launcher", "labs-launcher\launcher.csproj", "{B23D77B2-EA4F-460D-8F04-C98748CCBD99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
