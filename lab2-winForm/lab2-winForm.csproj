@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lab1\lab1_console.csproj" />
+    <ProjectReference Include="..\lab1\lab1-console.csproj" />
   </ItemGroup>
 
   <ItemGroup>

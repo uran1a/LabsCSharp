@@ -4,8 +4,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        //task1();
-        //task2();
+        task1Subtask1();
+       
     }
     enum Coordinates : int { X1 = 0, Y1, X2, Y2, X3, Y3 }
     static void task1Subtask1()
@@ -92,5 +92,6 @@ public class Program
         admin.AddEmployee(listEmployee);
         admin.DeleteEmployee();
         admin.PrintStructOfCompany();
+        Console.Read();
     }
 }
