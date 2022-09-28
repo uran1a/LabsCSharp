@@ -32,24 +32,26 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.listViewLabs = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.treeViewLabs = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.treeViewLabs);
             this.panel1.Controls.Add(this.buttonStart);
             this.panel1.Controls.Add(this.listViewLabs);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(23, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 323);
+            this.panel1.Size = new System.Drawing.Size(502, 554);
             this.panel1.TabIndex = 0;
             // 
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonStart.Location = new System.Drawing.Point(22, 259);
+            this.buttonStart.Location = new System.Drawing.Point(22, 491);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(138, 51);
             this.buttonStart.TabIndex = 2;
@@ -75,12 +77,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Лабораторные работы";
             // 
+            // treeViewLabs
+            // 
+            this.treeViewLabs.Location = new System.Drawing.Point(22, 259);
+            this.treeViewLabs.Name = "treeViewLabs";
+            this.treeViewLabs.Size = new System.Drawing.Size(460, 226);
+            this.treeViewLabs.TabIndex = 3;
+            // 
             // launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(549, 349);
+            this.ClientSize = new System.Drawing.Size(549, 578);
             this.Controls.Add(this.panel1);
             this.Name = "launcher";
             this.Text = "Form1";
@@ -96,5 +105,6 @@
         private Button buttonStart;
         private ListView listViewLabs;
         private Label label1;
+        private TreeView treeViewLabs;
     }
 }
