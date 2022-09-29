@@ -2,13 +2,15 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 namespace launcher
 {
+    public struct Laboratory
+    {
+        public string titleLab { get; set; }
+        public List<string> foldersLab { get; set; }
+        public List<string> taksLab { get; set; }
+    }
     public partial class launcher : Form
     {
-        struct Laboratory
-        {
-            public string titleLab { get; set; }
-            public List<string> taksLab { get; set; }
-        }
+        
         List<Laboratory> laboratoryList;
         public launcher()
         {
@@ -25,14 +27,19 @@ namespace launcher
             {
                 Laboratory laboratory = new Laboratory();
                 laboratory.taksLab = new List<string>();
+                laboratory.foldersLab = new List<string>();
                 string[] titleNode = folder.Split('\\');
                 string titleFolder = titleNode[titleNode.Length - 1];
                 if (regexLab.IsMatch(titleFolder))
                 {  
                     laboratory.titleLab = titleFolder.Split('-')[0];
+
                     bool check = false;
                     foreach (Laboratory lab in laboratoryList)
-                        if (lab.titleLab == laboratory.titleLab) check = true;
+                        if (lab.titleLab == laboratory.titleLab)
+                        {
+                            check = true;
+                        }
                     if (!check)
                         laboratoryList.Add(laboratory);
                 }
@@ -53,29 +60,23 @@ namespace launcher
                 treeViewLabs.Nodes.AddRange(new TreeNode[] { newTreeNode });
             }
         }
-
+        
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            /*
-            Console.WriteLine(treeViewLabs.SelectedNode.Index);
-            Console.WriteLine();
-           foreach(Laboratory lab in laboratoryList)
-            {
-                foreach(string task in lab.taksLab)
-                Console.WriteLine(task);
-            }
-            */
+            ProcessStartInfo procInfo = new ProcessStartInfo(laboratoryList[treeViewLabs.SelectedNode.Parent.Index].taksLab[treeViewLabs.SelectedNode.Index]);
+            var process = new Process();
+            process.StartInfo = procInfo;
             try
             {
                 if (treeViewLabs.SelectedNode.Nodes.Count != 0) throw new Exception();
-                //Process.Start(@"N:\code\2021\Study\c#\Labs\lab1\lab2-winForm\bin\Debug\net6.0-windows\lab1-console.exe");
-                Process.Start(laboratoryList[treeViewLabs.SelectedNode.Parent.Index].taksLab[treeViewLabs.SelectedNode.Index]);
+                process.Start();
+                process.WaitForExit();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
     }
 }

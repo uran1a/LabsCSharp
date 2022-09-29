@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1-console", "lab1\lab1-console.csproj", "{A3EAFFE5-C950-419A-AA9F-959F70456029}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2-winForm", "lab2-winForm\lab2-winForm.csproj", "{1B599F46-5969-4D4E-863B-7145BEA7882E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab1", "lab1", "{EE617BE9-53AA-4AEE-B793-EEDEE6E3596A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab2", "lab2", "{3611DED4-0C6D-4595-B0FE-D57D15F1A5AC}"
 EndProject
@@ -21,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "launcher", "launcher", "{2B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "launcher", "labs-launcher\launcher.csproj", "{B23D77B2-EA4F-460D-8F04-C98748CCBD99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab3-task2-4-console", "lab3-task2-4-console\lab3-task2-4-console.csproj", "{83290CB3-205C-4035-95CD-B1937842DBD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3-task2-4-console", "lab3-task2-4-console\lab3-task2-4-console.csproj", "{83290CB3-205C-4035-95CD-B1937842DBD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab3-task5-8-winForm", "lab3-task5-8-winForm\lab3-task5-8-winForm.csproj", "{70632872-B82E-4B6A-8E18-BD09F75C44DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3-task5-8-winForm", "lab3-task5-8-winForm\lab3-task5-8-winForm.csproj", "{70632872-B82E-4B6A-8E18-BD09F75C44DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A3EAFFE5-C950-419A-AA9F-959F70456029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3EAFFE5-C950-419A-AA9F-959F70456029}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3EAFFE5-C950-419A-AA9F-959F70456029}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3EAFFE5-C950-419A-AA9F-959F70456029}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B599F46-5969-4D4E-863B-7145BEA7882E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B599F46-5969-4D4E-863B-7145BEA7882E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B599F46-5969-4D4E-863B-7145BEA7882E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -56,7 +48,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A3EAFFE5-C950-419A-AA9F-959F70456029} = {EE617BE9-53AA-4AEE-B793-EEDEE6E3596A}
 		{1B599F46-5969-4D4E-863B-7145BEA7882E} = {3611DED4-0C6D-4595-B0FE-D57D15F1A5AC}
 		{776552B3-C151-4946-984E-E11D01971100} = {C1C3DB0F-B3CC-48BE-A802-84BE70E72B45}
 		{5ADBBD66-39F0-45CF-B338-C49FF0A4246F} = {C1C3DB0F-B3CC-48BE-A802-84BE70E72B45}
