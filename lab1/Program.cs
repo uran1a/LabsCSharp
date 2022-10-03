@@ -4,7 +4,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        //проверка
         //task1();
         //task2();
     }
