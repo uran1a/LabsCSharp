@@ -43,7 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(427, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Лабораторная работа №1";
+            this.label1.Text = "Лабораторная работа №2";
             // 
             // buttonTask1
             // 
