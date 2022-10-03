@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1_console", "lab1\lab1_console.csproj", "{A3EAFFE5-C950-419A-AA9F-959F70456029}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2-winForm", "lab2-winForm\lab2-winForm.csproj", "{1B599F46-5969-4D4E-863B-7145BEA7882E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2-winform", "lab2-winForm\lab2-winform.csproj", "{1B599F46-5969-4D4E-863B-7145BEA7882E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab3-console", "lab3-console\lab3-console.csproj", "{BADE7426-0825-4483-8B16-B17BB6FB0E03}"
 EndProject
