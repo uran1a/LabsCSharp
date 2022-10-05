@@ -2,6 +2,7 @@
 {
     static void Main(String[] args)
     {
+
         task4();
     }
     static void task2()
@@ -21,6 +22,7 @@
             Console.WriteLine("Некорректные символы!");
         }
     }
+
     static void task4()
     {
         try
