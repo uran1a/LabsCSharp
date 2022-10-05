@@ -6,5 +6,10 @@ namespace lab3_winform
         {
             InitializeComponent();
         }
+
+        private void buttonCalculation6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
