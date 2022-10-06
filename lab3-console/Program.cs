@@ -2,8 +2,26 @@
 {
     static void Main(String[] args)
     {
+        Console.WriteLine("Введите предел eps:");
+        double eps = Convert.ToDouble(Console.ReadLine());
+        double sum = 0, s = 999999;
+        for (int i = 1; s > eps; i++)
+        {
+            s = 1 / Math.Sqrt(Factorial(i));
+            Console.WriteLine("{0} член ряда = {1}", i, s);
+            sum += s;
+            Console.WriteLine("промежуточная сумма = {0}", sum);
+        }
+        sum = sum - s;
+        Console.WriteLine("Сумма:" + sum);
+        Console.ReadKey();
+        int Factorial(int m)
+        {
+            if (m == 1) return 1;
 
-        task4();
+            return m * Factorial(m - 1);
+        }
+        //task1();
     }
     static void task2()
     {
@@ -22,7 +40,21 @@
             Console.WriteLine("Некорректные символы!");
         }
     }
-
+    static void task3()
+    {
+        Console.WriteLine("Введите A:");
+        int A = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Введите B:");
+        int B = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Цифры расположены в порядке возрастания:");
+        for (int i = A; i <= B; i++)
+        {
+            Console.WriteLine(i);
+        }
+        int N = Math.Abs(B - A);
+        Console.WriteLine("Количество N введёных чисел:" + N);
+        Console.ReadKey();
+    }
     static void task4()
     {
         try
@@ -58,20 +90,17 @@
             Console.WriteLine("Выберите 0 - выход из программы");
             switch (int.Parse(Console.ReadLine()))
             {
-                case 0:
-
-                    break;
                 case 1:
                     Console.WriteLine("Меню успешно создано");
                     break;
                 case 2:
-
+                    task2();
                     break;
                 case 3:
                     task3();
                     break;
                 case 4:
-
+                    task4();
                     break;
                 case 5:
                     Console.WriteLine("Введите предел eps:");
@@ -133,19 +162,5 @@
         }
         Console.ReadKey();
     }
-    static void task3()
-    {
-        Console.WriteLine("Введите A:");
-        int A = Convert.ToInt16(Console.ReadLine());
-        Console.WriteLine("Введите B:");
-        int B = Convert.ToInt16(Console.ReadLine());
-        Console.WriteLine("Цифры расположены в порядке возрастания:");
-        for (int i = A; i <= B; i++)
-        {
-            Console.WriteLine(i);
-        }
-        int N = Math.Abs(B - A);
-        Console.WriteLine("Количество N введёных чисел:" + N);
-        Console.ReadKey();
-    }
+
 }

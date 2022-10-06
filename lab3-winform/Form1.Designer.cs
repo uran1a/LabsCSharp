@@ -47,7 +47,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.buttonResult8 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelResult5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonResult5 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBoxEps = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -55,6 +62,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -71,6 +79,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBoxEps);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.labelResult5);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.buttonResult5);
+            this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -248,6 +262,61 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(6, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(264, 28);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Сумма бесконечного ряда: ";
+            // 
+            // labelResult5
+            // 
+            this.labelResult5.AutoSize = true;
+            this.labelResult5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelResult5.Location = new System.Drawing.Point(270, 140);
+            this.labelResult5.Name = "labelResult5";
+            this.labelResult5.Size = new System.Drawing.Size(0, 28);
+            this.labelResult5.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(6, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(195, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Введите предел eps:";
+            // 
+            // buttonResult5
+            // 
+            this.buttonResult5.Location = new System.Drawing.Point(8, 179);
+            this.buttonResult5.Name = "buttonResult5";
+            this.buttonResult5.Size = new System.Drawing.Size(152, 44);
+            this.buttonResult5.TabIndex = 7;
+            this.buttonResult5.Text = "Найти сумму";
+            this.buttonResult5.UseVisualStyleBackColor = true;
+            this.buttonResult5.Click += new System.EventHandler(this.buttonResult5_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::lab3_winform.Properties.Resources.Screenshot_3;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(540, 57);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textBoxEps
+            // 
+            this.textBoxEps.Location = new System.Drawing.Point(8, 97);
+            this.textBoxEps.Name = "textBoxEps";
+            this.textBoxEps.Size = new System.Drawing.Size(125, 27);
+            this.textBoxEps.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -257,6 +326,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -266,6 +337,7 @@
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +362,11 @@
         private Label label5;
         private Button buttonResult8;
         private PictureBox pictureBox2;
+        private Label label4;
+        private Label labelResult5;
+        private Label label7;
+        private Button buttonResult5;
+        private PictureBox pictureBox3;
+        private TextBox textBoxEps;
     }
 }

@@ -5,6 +5,7 @@ namespace lab3_winform
         public Form1()
         {
             InitializeComponent();
+            labelResult5.Visible = false;
             labelResult6.Visible = false;
             labelResult8.Visible = false;
         }
@@ -40,6 +41,25 @@ namespace lab3_winform
                 sum += Convert.ToInt32(Math.Pow(i, n - i + 1));
             labelResult8.Text = Convert.ToString(sum);
             labelResult8.Visible = true;
+        }
+
+        private void buttonResult5_Click(object sender, EventArgs e)
+        {
+            double eps = Convert.ToDouble(textBoxEps.Text);
+            double sum = 0, s = 999999;
+            for (int i = 1; s > eps; i++)
+            {
+                s = 1 / Math.Sqrt(Factorial(i));
+                sum += s;
+            }
+            sum = sum - s;
+            labelResult5.Text = Convert.ToString(Math.Round(sum,2));
+            labelResult5.Visible = true;
+            int Factorial(int m)
+            {
+                if (m == 1) return 1;
+                return m * Factorial(m - 1);
+            }
         }
     }
 }
