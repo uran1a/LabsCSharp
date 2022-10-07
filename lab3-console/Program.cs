@@ -2,26 +2,7 @@
 {
     static void Main(String[] args)
     {
-        Console.WriteLine("Введите предел eps:");
-        double eps = Convert.ToDouble(Console.ReadLine());
-        double sum = 0, s = 999999;
-        for (int i = 1; s > eps; i++)
-        {
-            s = 1 / Math.Sqrt(Factorial(i));
-            Console.WriteLine("{0} член ряда = {1}", i, s);
-            sum += s;
-            Console.WriteLine("промежуточная сумма = {0}", sum);
-        }
-        sum = sum - s;
-        Console.WriteLine("Сумма:" + sum);
-        Console.ReadKey();
-        int Factorial(int m)
-        {
-            if (m == 1) return 1;
-
-            return m * Factorial(m - 1);
-        }
-        //task1();
+        task1();
     }
     static void task2()
     {
@@ -127,30 +108,7 @@
 
                     break;
                 case 7:
-                    Console.WriteLine("Введите четырёхзначное число:");
-                    int n = Convert.ToInt16(Console.ReadLine());
-                    int thousands, hundreds, tens, units, sum1, sum2, sum3;
-                    thousands = (n / 1000);
-                    hundreds = (n % 1000) / 100;
-                    tens = (n % 100) / 10;
-                    units = (n % 10);
-                    sum1 = thousands + tens;
-                    sum2 = thousands + units;
-                    sum3 = tens + units;
-                    if (sum1 < hundreds)
-                    {
-                        Console.WriteLine("Первичная сумма цифр: " + sum1);
-                    }
-                    else if (sum2 < hundreds)
-                    {
-                        Console.WriteLine("Вторичная сумма цифр: " + sum2);
-                    }
-                    else if (sum3 < hundreds)
-                    {
-                        Console.WriteLine("Третичная сумма цифр: " + sum3);
-                    }
-                    else Console.WriteLine("Все комбинации суммы цифр больше сотен!");
-                    Console.ReadKey();
+                    
                     break;
                 case 8:
 
