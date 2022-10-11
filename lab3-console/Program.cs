@@ -4,6 +4,33 @@
     {
         task1();
     }
+    static void task1()
+    {
+        while (true)
+        {
+            Console.WriteLine("Выберите одной из подзаданий: 1,2,3,4,5,6,7,8");
+            Console.WriteLine("Выберите 0 - выход из программы");
+            switch (int.Parse(Console.ReadLine()))
+            {
+                case 1:
+                    Console.WriteLine("Меню успешно создано");
+                    break;
+                case 2:
+                    task2();
+                    break;
+                case 3:
+                    task3();
+                    break;
+                case 4:
+                    task4();
+                    break;
+                default:
+                    Console.WriteLine("Выбрано неверное значение. Осуществите выбор повторно.");
+                    break;
+            }
+        }
+        Console.ReadKey();
+    }
     static void task2()
     {
         try
@@ -63,62 +90,4 @@
         }
         
     }
-    static void task1()
-    {
-        while (true)
-        {
-            Console.WriteLine("Выберите одной из подзаданий: 1,2,3,4,5,6,7,8");
-            Console.WriteLine("Выберите 0 - выход из программы");
-            switch (int.Parse(Console.ReadLine()))
-            {
-                case 1:
-                    Console.WriteLine("Меню успешно создано");
-                    break;
-                case 2:
-                    task2();
-                    break;
-                case 3:
-                    task3();
-                    break;
-                case 4:
-                    task4();
-                    break;
-                case 5:
-                    Console.WriteLine("Введите предел eps:");
-                    double eps = Convert.ToDouble(Console.ReadLine());
-                    double sum = 0, s = 999999;
-                    for (int i = 1; s > eps; i++)
-                    {
-                        s = 1 / Math.Sqrt(Factorial(i));
-                        Console.WriteLine("{0} член ряда = {1}", i, s);
-                        sum += s;
-                        Console.WriteLine("промежуточная сумма = {0}", sum);
-                    }
-                    sum = sum - s;
-                    Console.WriteLine("Сумма:" + sum);
-                    Console.ReadKey();
-                    int Factorial(int m)
-                    {
-                        if (m == 1) return 1;
-
-                        return m * Factorial(m - 1);
-                    }
-                    break;
-                case 6:
-
-                    break;
-                case 7:
-                    
-                    break;
-                case 8:
-
-                    break;
-                default:
-                    Console.WriteLine("Выбрано неверное значение. Осуществите выбор повторно.");
-                    break;
-            }
-        }
-        Console.ReadKey();
-    }
-
 }
