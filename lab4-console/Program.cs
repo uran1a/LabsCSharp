@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        task4();
+        task3();
     }
     static void task1()
     {
@@ -15,7 +15,7 @@ class Program
         Random k = new Random();
         for (int i = 0; i < n; i++)
         {
-            nums[i] = (Math.Pow(n, k.Next(0, 100)) / Math.Pow(n + 1, k.Next(0, 100)));
+            nums[i] = (Math.Pow(-1, k.Next(0, 100))*Math.Sqrt(n) /(2 + Math.Pow(n, 2)));
             Console.WriteLine(nums[i]);
         }
         Console.WriteLine("__________________________________________________________");
@@ -24,7 +24,7 @@ class Program
         {
             for (int j = 0; j < m; j++)
             {
-                nums2[i, j] = Math.Round((Math.Pow(n, k.Next(0, 100)) / Math.Pow(n + 1, k.Next(0, 100))), 5);
+                nums2[i, j] = Math.Round((Math.Pow(-1, k.Next(0, 100)) * Math.Sqrt(n) / (2 + Math.Pow(n, 2))), 5);
                 Console.Write(nums2[i, j] + "\t");
             }
             Console.WriteLine();
@@ -67,23 +67,23 @@ class Program
         {
             for (int j = 0; j < n; j++)
             {
-                nums2[i, j] = i + j;
+                nums2[i, j] = i + j + 1;
                 Console.Write(nums2[i, j] + "\t");
             }
             Console.WriteLine();
         }
-        double sum = 0;
+        double proiz = 1;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
             {
-                if (j > i)
+                if (j == i)
                 {
-                    sum += nums2[i, j];
+                    proiz *= nums2[i, j];
                 }
             }
         }
-        Console.WriteLine("Cумма элементов выше главной диагонали:" + sum);
+        Console.WriteLine("Произведение элементов на главной диагонали:" + proiz);
         Console.ReadKey();
     }
     public static void task4()
