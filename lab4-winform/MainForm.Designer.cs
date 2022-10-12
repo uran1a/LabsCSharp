@@ -67,6 +67,7 @@
             this.buttonAddHouse.TabIndex = 3;
             this.buttonAddHouse.Text = "Добавить";
             this.buttonAddHouse.UseVisualStyleBackColor = true;
+            this.buttonAddHouse.Click += new System.EventHandler(this.buttonAddHouse_Click);
             // 
             // label1
             // 

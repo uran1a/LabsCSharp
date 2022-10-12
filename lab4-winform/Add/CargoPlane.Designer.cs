@@ -53,6 +53,7 @@
             this.buttonAddCargoPlane.TabIndex = 35;
             this.buttonAddCargoPlane.Text = "Добавить";
             this.buttonAddCargoPlane.UseVisualStyleBackColor = true;
+            this.buttonAddCargoPlane.Click += new System.EventHandler(this.buttonAddCargoPlane_Click);
             // 
             // label1
             // 

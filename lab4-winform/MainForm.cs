@@ -23,27 +23,37 @@ namespace lab4_winform
         }
         private void reloadListView()
         {
-            const string TYPE = "“ËÔ";
+            listView.Columns.Clear();
             listView.Items.Clear();
+
+            listView.Columns.Add("#", 30, HorizontalAlignment.Center);
+            listView.Columns.Add("ddd ", 950, HorizontalAlignment.Left);
             for (int i = 0; i < listObjects.Count; i++)
             {
-                listView.Columns.Add(TYPE, 50, HorizontalAlignment.Center);
-                listView.Columns.Add(listObjects[i].Values.First(), 180, HorizontalAlignment.Center);
+                string lineObject = "";
+                ListViewItem newItem = new ListViewItem(Convert.ToString(i + 1));
                 foreach (KeyValuePair<string, string> pair in listObjects[i])
                 {
-                    if (pair.Key == TYPE) continue;
-                    ListViewItem newItem = new ListViewItem(pair.Key);
-                    ListViewItem.ListViewSubItem Value = new ListViewItem.ListViewSubItem(newItem, pair.Value);
-                    newItem.SubItems.Add(Value);
-                    listView.Items.AddRange(new ListViewItem[] { newItem });
+                    lineObject += (pair.Key + ": " + pair.Value);
                 }
+                ListViewItem.ListViewSubItem Value = new ListViewItem.ListViewSubItem(newItem, lineObject);
+                newItem.SubItems.Add(Value);
+                listView.Items.AddRange(new ListViewItem[] { newItem });
             }
-            
         }
-
         private void buttonAddCargoPlane_Click(object sender, EventArgs e)
         {
-
+            CargoPlane pl = new CargoPlane();
+            pl.ShowDialog();
+            listObjects.Add(pl.getCargoPlane());
+            reloadListView();
+        }
+        private void buttonAddHouse_Click(object sender, EventArgs e)
+        {
+            House hs = new House();
+            hs.ShowDialog();
+            listObjects.Add(hs.getHouse());
+            reloadListView();
         }
     }
 }
