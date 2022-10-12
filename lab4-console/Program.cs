@@ -3,21 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] numbers = { 38, 27, 43, 3, 9, 82, 10 };
-        int len = numbers.Length;
-        Console.WriteLine("Before Merge Sort:");
-        foreach (int item in numbers)
-        {
-            Console.Write(item + " ");
-        }
-        Console.WriteLine();
-        Console.WriteLine("After Merge Sort");
-        SortMethod(numbers, 0, len - 1);
-        foreach (int item in numbers)
-        {
-            Console.Write(item + " ");
-        }
-        Console.Read();
+        task4();
     }
     static void task2()
     {
@@ -45,40 +31,72 @@ class Program
         else if (FindEvenNumbers(arrayB) == FindEvenNumbers(arrayA)) PrintArray(arrayB);
         else Console.WriteLine("Массиvы равны ;)");
     }
-    static public void MergeMethod(int[] numbers, int left, int mid, int right)
+    public static void task4()
     {
-        int[] temp = new int[25];
-        int i, left_end, num_elements, tmp_pos;
-        left_end = (mid - 1);
-        tmp_pos = left;
-        num_elements = (right - left + 1);
-        while ((left <= left_end) && (mid <= right))
-        {
-            if (numbers[left] <= numbers[mid])
-                temp[tmp_pos++] = numbers[left++];
-            else
-                temp[tmp_pos++] = numbers[mid++];
-        }
-        while (left <= left_end)
-            temp[tmp_pos++] = numbers[left++];
-        while (mid <= right)
-            temp[tmp_pos++] = numbers[mid++];
-        for (i = 0; i < num_elements; i++)
-        {
-            numbers[right] = temp[right];
-            right--;
-        }
-    }
-    static public void SortMethod(int[] numbers, int left, int right)
-    {
-        int mid;
-        if (right > left)
-        {
-            mid = (right + left) / 2;
-            SortMethod(numbers, left, mid);
-            SortMethod(numbers, (mid + 1), right);
-            MergeMethod(numbers, left, (mid + 1), right);
-        }
-    }
+        Console.WriteLine("Введите массив в строчку:");
+        string[] line = Console.ReadLine().Split(' ');
+        int[] array = Array.ConvertAll(line, i => Convert.ToInt32(i));
+        array = mergeSort(array);
+        foreach (int num in array)
+            Console.Write(num + " ");
 
+        static int[] mergeSort(int[] array)
+        {
+            int[] left;
+            int[] right;
+            int[] result = new int[array.Length];
+            if (array.Length <= 1)
+                return array;
+            int midPoint = array.Length / 2;
+            left = new int[midPoint];
+            if (array.Length % 2 == 0) right = new int[midPoint];
+            else right = new int[midPoint + 1];
+            for (int i = 0; i < midPoint; i++) left[i] = array[i];
+
+            int x = 0;
+            for (int i = midPoint; i < array.Length; i++)
+                right[x++] = array[i];
+            left = mergeSort(left);
+            right = mergeSort(right);
+            result = merge(left, right);
+            return result;
+        }
+        static int[] merge(int[] left, int[] right)
+        {
+            int resultLength = right.Length + left.Length;
+            int[] result = new int[resultLength];
+            int indexLeft = 0, indexRight = 0, indexResult = 0;
+            while (indexLeft < left.Length || indexRight < right.Length)
+            {
+                if (indexLeft < left.Length && indexRight < right.Length)
+                {
+                    if (left[indexLeft] <= right[indexRight])
+                    {
+                        result[indexResult] = left[indexLeft];
+                        indexLeft++;
+                        indexResult++;
+                    }
+                    else
+                    {
+                        result[indexResult] = right[indexRight];
+                        indexRight++;
+                        indexResult++;
+                    }
+                }
+                else if (indexLeft < left.Length)
+                {
+                    result[indexResult] = left[indexLeft];
+                    indexLeft++;
+                    indexResult++;
+                }
+                else if (indexRight < right.Length)
+                {
+                    result[indexResult] = right[indexRight];
+                    indexRight++;
+                    indexResult++;
+                }
+            }
+            return result;
+        }
+    }
 }
