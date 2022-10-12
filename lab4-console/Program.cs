@@ -7,18 +7,6 @@ class Program
     }
     static void task2()
     {
-        int FindEvenNumbers(int[] nums)
-        {
-            int countEvenNumbers = 0;
-            for (int i = 0; i < nums.Length; i++)
-                if(nums[i] % 2 == 0) countEvenNumbers++;
-            return countEvenNumbers;
-        }
-        void PrintArray(int[] nums)
-        {
-            foreach (int num in nums)
-                Console.Write(num + " ");
-        }
         Console.Write("Введите массив А (в строчку): "); 
         string[] line1 = Console.ReadLine().Split(' ');
         int[] arrayA = Array.ConvertAll(line1, i => Convert.ToInt32(i));
@@ -30,6 +18,19 @@ class Program
         if (FindEvenNumbers(arrayA) > FindEvenNumbers(arrayB)) PrintArray(arrayA);
         else if (FindEvenNumbers(arrayB) == FindEvenNumbers(arrayA)) PrintArray(arrayB);
         else Console.WriteLine("Массиvы равны ;)");
+        
+        int FindEvenNumbers(int[] nums)
+        {
+            int countEvenNumbers = 0;
+            for (int i = 0; i < nums.Length; i++)
+                if (nums[i] % 2 == 0) countEvenNumbers++;
+            return countEvenNumbers;
+        }
+        void PrintArray(int[] nums)
+        {
+            foreach (int num in nums)
+                Console.Write(num + " ");
+        }
     }
     public static void task4()
     {
@@ -40,7 +41,7 @@ class Program
         foreach (int num in array)
             Console.Write(num + " ");
 
-        static int[] mergeSort(int[] array)
+        int[] mergeSort(int[] array)
         {
             int[] left;
             int[] right;
@@ -61,7 +62,7 @@ class Program
             result = merge(left, right);
             return result;
         }
-        static int[] merge(int[] left, int[] right)
+        int[] merge(int[] left, int[] right)
         {
             int resultLength = right.Length + left.Length;
             int[] result = new int[resultLength];

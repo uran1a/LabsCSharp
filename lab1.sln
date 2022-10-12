@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3-console", "lab3-consol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3-winform", "lab3-winform\lab3-winform.csproj", "{C4073B77-DB5D-4C70-8CC7-96F7946A5323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab4-console", "lab4-console\lab4-console.csproj", "{62A95231-E401-4B5A-8F6B-876E43475F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab4-console", "lab4-console\lab4-console.csproj", "{62A95231-E401-4B5A-8F6B-876E43475F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab4-winform", "lab4-winform\lab4-winform.csproj", "{7C785879-DADD-4206-A011-727F0EBEAF83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{62A95231-E401-4B5A-8F6B-876E43475F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62A95231-E401-4B5A-8F6B-876E43475F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62A95231-E401-4B5A-8F6B-876E43475F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C785879-DADD-4206-A011-727F0EBEAF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C785879-DADD-4206-A011-727F0EBEAF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C785879-DADD-4206-A011-727F0EBEAF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C785879-DADD-4206-A011-727F0EBEAF83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
