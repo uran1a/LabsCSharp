@@ -3,7 +3,33 @@ class Program
 {
     static void Main(string[] args)
     {
-        task4();
+        task3();
+    }
+    static void task1()
+    {
+        Console.WriteLine("Введите размерность массива n:");
+        int n = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Введите размерность массива m:");
+        int m = Convert.ToInt16(Console.ReadLine());
+        double[] nums = new double[n];
+        Random k = new Random();
+        for (int i = 0; i < n; i++)
+        {
+            nums[i] = (Math.Pow(-1, k.Next(0, 100))*Math.Sqrt(n) /(2 + Math.Pow(n, 2)));
+            Console.WriteLine(nums[i]);
+        }
+        Console.WriteLine("__________________________________________________________");
+        double[,] nums2 = new double[n, m];
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                nums2[i, j] = Math.Round((Math.Pow(-1, k.Next(0, 100)) * Math.Sqrt(n) / (2 + Math.Pow(n, 2))), 5);
+                Console.Write(nums2[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+        Console.ReadKey();
     }
     static void task2()
     {
@@ -31,6 +57,34 @@ class Program
             foreach (int num in nums)
                 Console.Write(num + " ");
         }
+    }
+    static void task3()
+    {
+        Console.WriteLine("Введите размерность массива:");
+        int n = Convert.ToInt16(Console.ReadLine());
+        double[,] nums2 = new double[n, n];
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                nums2[i, j] = i + j + 1;
+                Console.Write(nums2[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+        double proiz = 1;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (j == i)
+                {
+                    proiz *= nums2[i, j];
+                }
+            }
+        }
+        Console.WriteLine("Произведение элементов на главной диагонали:" + proiz);
+        Console.ReadKey();
     }
     public static void task4()
     {
