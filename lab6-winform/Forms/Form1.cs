@@ -1,11 +1,13 @@
 using lab6_winform.Classes;
 namespace lab6_winform
 {
-    public partial class Task1 : Form
+    public partial class Form1 : Form
     {
         List<Build> builds = new();
         List<Build> addBuilds;
-        public Task1()
+
+        Stack<string> stack = new();
+        public Form1()
         {
             InitializeComponent();
 
@@ -67,7 +69,7 @@ namespace lab6_winform
                         if (checkedListBoxTask1.CheckedItems[i].ToString() == addBuilds[j].ToString())
                         {
                             int index = Convert.ToInt32(textBoxTask1.Text);
-                            textBoxTask1.Text = "";
+                            textBoxTask1.Clear();
                             if (index < builds.Count || index < 0) throw new Exception("Неверный индекс!");
                             builds.Insert(index, addBuilds[j]);
                             addBuilds.RemoveAt(j);
@@ -98,6 +100,28 @@ namespace lab6_winform
         {
             builds.Clear();
             ReloadListView();
+        }
+        private void ReloadStack()
+        {
+            string stackText = "";
+            foreach (string s in stack)
+            {
+                stackText += (s + Environment.NewLine);
+            }
+            textBoxStack.Text = stackText;
+        }
+
+        private void buttonPush_Click(object sender, EventArgs e)
+        {
+            stack.Push(textBoxPush.Text);
+            textBoxPush.Clear();
+            ReloadStack();
+        }
+
+        private void buttonPop_Click(object sender, EventArgs e)
+        {
+            textBoxPop.Text = stack.Pop();
+            ReloadStack();
         }
     }
 }

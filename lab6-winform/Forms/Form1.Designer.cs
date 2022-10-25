@@ -1,6 +1,6 @@
 ﻿namespace lab6_winform
 {
-    partial class Task1
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -40,8 +40,15 @@
             this.listViewTask1 = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonPop = new System.Windows.Forms.Button();
+            this.buttonPush = new System.Windows.Forms.Button();
+            this.textBoxPop = new System.Windows.Forms.TextBox();
+            this.textBoxPush = new System.Windows.Forms.TextBox();
+            this.textBoxStack = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -160,6 +167,12 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.buttonPop);
+            this.tabPage3.Controls.Add(this.buttonPush);
+            this.tabPage3.Controls.Add(this.textBoxPop);
+            this.tabPage3.Controls.Add(this.textBoxPush);
+            this.tabPage3.Controls.Add(this.textBoxStack);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(483, 296);
@@ -167,17 +180,71 @@
             this.tabPage3.Text = "Задание 3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // Task1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(160, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Введите значение в Stack:";
+            // 
+            // buttonPop
+            // 
+            this.buttonPop.Location = new System.Drawing.Point(160, 125);
+            this.buttonPop.Name = "buttonPop";
+            this.buttonPop.Size = new System.Drawing.Size(85, 31);
+            this.buttonPop.TabIndex = 4;
+            this.buttonPop.Text = "Pop";
+            this.buttonPop.UseVisualStyleBackColor = true;
+            this.buttonPop.Click += new System.EventHandler(this.buttonPop_Click);
+            // 
+            // buttonPush
+            // 
+            this.buttonPush.Location = new System.Drawing.Point(160, 59);
+            this.buttonPush.Name = "buttonPush";
+            this.buttonPush.Size = new System.Drawing.Size(85, 31);
+            this.buttonPush.TabIndex = 3;
+            this.buttonPush.Text = "Push";
+            this.buttonPush.UseVisualStyleBackColor = true;
+            this.buttonPush.Click += new System.EventHandler(this.buttonPush_Click);
+            // 
+            // textBoxPop
+            // 
+            this.textBoxPop.Location = new System.Drawing.Point(160, 96);
+            this.textBoxPop.Name = "textBoxPop";
+            this.textBoxPop.Size = new System.Drawing.Size(114, 23);
+            this.textBoxPop.TabIndex = 2;
+            // 
+            // textBoxPush
+            // 
+            this.textBoxPush.Location = new System.Drawing.Point(160, 30);
+            this.textBoxPush.Name = "textBoxPush";
+            this.textBoxPush.Size = new System.Drawing.Size(114, 23);
+            this.textBoxPush.TabIndex = 1;
+            // 
+            // textBoxStack
+            // 
+            this.textBoxStack.Location = new System.Drawing.Point(0, 0);
+            this.textBoxStack.Multiline = true;
+            this.textBoxStack.Name = "textBoxStack";
+            this.textBoxStack.Size = new System.Drawing.Size(154, 196);
+            this.textBoxStack.TabIndex = 0;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 379);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Task1";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,5 +263,11 @@
         private Button buttonClearTask1;
         private TextBox textBoxTask1;
         private CheckedListBox checkedListBoxTask1;
+        private Button buttonPush;
+        private TextBox textBoxPop;
+        private TextBox textBoxPush;
+        private TextBox textBoxStack;
+        private Button buttonPop;
+        private Label label1;
     }
 }
