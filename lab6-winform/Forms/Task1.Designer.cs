@@ -1,6 +1,6 @@
 ﻿namespace lab6_winform
 {
-    partial class Form1
+    partial class Task1
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,14 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxTask1 = new System.Windows.Forms.TextBox();
+            this.checkedListBoxTask1 = new System.Windows.Forms.CheckedListBox();
+            this.buttonClearTask1 = new System.Windows.Forms.Button();
+            this.buttonRemoveTask1 = new System.Windows.Forms.Button();
+            this.buttonSortTask1 = new System.Windows.Forms.Button();
+            this.buttonInsertTask1 = new System.Windows.Forms.Button();
             this.buttonAddTask1 = new System.Windows.Forms.Button();
             this.listViewTask1 = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttonInsertTask1 = new System.Windows.Forms.Button();
-            this.buttonSortTask1 = new System.Windows.Forms.Button();
-            this.buttonRemoveTask1 = new System.Windows.Forms.Button();
-            this.buttonClearTask1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -50,11 +52,13 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(565, 379);
+            this.tabControl1.Size = new System.Drawing.Size(491, 324);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBoxTask1);
+            this.tabPage1.Controls.Add(this.checkedListBoxTask1);
             this.tabPage1.Controls.Add(this.buttonClearTask1);
             this.tabPage1.Controls.Add(this.buttonRemoveTask1);
             this.tabPage1.Controls.Add(this.buttonSortTask1);
@@ -64,14 +68,71 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(557, 351);
+            this.tabPage1.Size = new System.Drawing.Size(483, 296);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Задание 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // textBoxTask1
+            // 
+            this.textBoxTask1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTask1.Location = new System.Drawing.Point(310, 132);
+            this.textBoxTask1.Multiline = true;
+            this.textBoxTask1.Name = "textBoxTask1";
+            this.textBoxTask1.Size = new System.Drawing.Size(81, 36);
+            this.textBoxTask1.TabIndex = 8;
+            // 
+            // checkedListBoxTask1
+            // 
+            this.checkedListBoxTask1.FormattingEnabled = true;
+            this.checkedListBoxTask1.Location = new System.Drawing.Point(311, 8);
+            this.checkedListBoxTask1.Name = "checkedListBoxTask1";
+            this.checkedListBoxTask1.Size = new System.Drawing.Size(167, 76);
+            this.checkedListBoxTask1.TabIndex = 7;
+            // 
+            // buttonClearTask1
+            // 
+            this.buttonClearTask1.Location = new System.Drawing.Point(397, 174);
+            this.buttonClearTask1.Name = "buttonClearTask1";
+            this.buttonClearTask1.Size = new System.Drawing.Size(81, 36);
+            this.buttonClearTask1.TabIndex = 5;
+            this.buttonClearTask1.Text = "Clear";
+            this.buttonClearTask1.UseVisualStyleBackColor = true;
+            this.buttonClearTask1.Click += new System.EventHandler(this.buttonClearTask1_Click);
+            // 
+            // buttonRemoveTask1
+            // 
+            this.buttonRemoveTask1.Location = new System.Drawing.Point(310, 174);
+            this.buttonRemoveTask1.Name = "buttonRemoveTask1";
+            this.buttonRemoveTask1.Size = new System.Drawing.Size(81, 36);
+            this.buttonRemoveTask1.TabIndex = 4;
+            this.buttonRemoveTask1.Text = "Remove";
+            this.buttonRemoveTask1.UseVisualStyleBackColor = true;
+            this.buttonRemoveTask1.Click += new System.EventHandler(this.buttonRemoveTask1_Click);
+            // 
+            // buttonSortTask1
+            // 
+            this.buttonSortTask1.Location = new System.Drawing.Point(397, 90);
+            this.buttonSortTask1.Name = "buttonSortTask1";
+            this.buttonSortTask1.Size = new System.Drawing.Size(81, 36);
+            this.buttonSortTask1.TabIndex = 3;
+            this.buttonSortTask1.Text = "Sort";
+            this.buttonSortTask1.UseVisualStyleBackColor = true;
+            this.buttonSortTask1.Click += new System.EventHandler(this.buttonSortTask1_Click);
+            // 
+            // buttonInsertTask1
+            // 
+            this.buttonInsertTask1.Location = new System.Drawing.Point(397, 132);
+            this.buttonInsertTask1.Name = "buttonInsertTask1";
+            this.buttonInsertTask1.Size = new System.Drawing.Size(81, 36);
+            this.buttonInsertTask1.TabIndex = 2;
+            this.buttonInsertTask1.Text = "Insert";
+            this.buttonInsertTask1.UseVisualStyleBackColor = true;
+            this.buttonInsertTask1.Click += new System.EventHandler(this.buttonInsertTask1_Click);
+            // 
             // buttonAddTask1
             // 
-            this.buttonAddTask1.Location = new System.Drawing.Point(310, 8);
+            this.buttonAddTask1.Location = new System.Drawing.Point(310, 88);
             this.buttonAddTask1.Name = "buttonAddTask1";
             this.buttonAddTask1.Size = new System.Drawing.Size(81, 36);
             this.buttonAddTask1.TabIndex = 1;
@@ -92,7 +153,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(557, 351);
+            this.tabPage2.Size = new System.Drawing.Size(483, 296);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Задание 2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -101,61 +162,22 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(557, 351);
+            this.tabPage3.Size = new System.Drawing.Size(483, 296);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Задание 3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // buttonInsertTask1
-            // 
-            this.buttonInsertTask1.Location = new System.Drawing.Point(310, 50);
-            this.buttonInsertTask1.Name = "buttonInsertTask1";
-            this.buttonInsertTask1.Size = new System.Drawing.Size(81, 36);
-            this.buttonInsertTask1.TabIndex = 2;
-            this.buttonInsertTask1.Text = "Insert";
-            this.buttonInsertTask1.UseVisualStyleBackColor = true;
-            this.buttonInsertTask1.Click += new System.EventHandler(this.buttonInsertTask1_Click);
-            // 
-            // buttonSortTask1
-            // 
-            this.buttonSortTask1.Location = new System.Drawing.Point(310, 92);
-            this.buttonSortTask1.Name = "buttonSortTask1";
-            this.buttonSortTask1.Size = new System.Drawing.Size(81, 36);
-            this.buttonSortTask1.TabIndex = 3;
-            this.buttonSortTask1.Text = "Sort";
-            this.buttonSortTask1.UseVisualStyleBackColor = true;
-            this.buttonSortTask1.Click += new System.EventHandler(this.buttonSortTask1_Click);
-            // 
-            // buttonRemoveTask1
-            // 
-            this.buttonRemoveTask1.Location = new System.Drawing.Point(310, 134);
-            this.buttonRemoveTask1.Name = "buttonRemoveTask1";
-            this.buttonRemoveTask1.Size = new System.Drawing.Size(81, 36);
-            this.buttonRemoveTask1.TabIndex = 4;
-            this.buttonRemoveTask1.Text = "Remove";
-            this.buttonRemoveTask1.UseVisualStyleBackColor = true;
-            this.buttonRemoveTask1.Click += new System.EventHandler(this.buttonRemoveTask1_Click);
-            // 
-            // buttonClearTask1
-            // 
-            this.buttonClearTask1.Location = new System.Drawing.Point(310, 176);
-            this.buttonClearTask1.Name = "buttonClearTask1";
-            this.buttonClearTask1.Size = new System.Drawing.Size(81, 36);
-            this.buttonClearTask1.TabIndex = 5;
-            this.buttonClearTask1.Text = "Clear";
-            this.buttonClearTask1.UseVisualStyleBackColor = true;
-            this.buttonClearTask1.Click += new System.EventHandler(this.buttonClearTask1_Click);
-            // 
-            // Form1
+            // Task1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 379);
+            this.ClientSize = new System.Drawing.Size(493, 379);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "Task1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +194,7 @@
         private Button buttonInsertTask1;
         private Button buttonRemoveTask1;
         private Button buttonClearTask1;
+        private TextBox textBoxTask1;
+        private CheckedListBox checkedListBoxTask1;
     }
 }
