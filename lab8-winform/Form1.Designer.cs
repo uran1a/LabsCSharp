@@ -30,10 +30,17 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonFindSum = new System.Windows.Forms.Button();
+            this.textBoxResultTask1 = new System.Windows.Forms.TextBox();
+            this.buttonCreateFileTask1 = new System.Windows.Forms.Button();
+            this.textBoxTitleFile = new System.Windows.Forms.TextBox();
+            this.buttonCreateFolderTask1 = new System.Windows.Forms.Button();
+            this.textBoxTitleFolder = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -50,6 +57,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonFindSum);
+            this.tabPage1.Controls.Add(this.textBoxResultTask1);
+            this.tabPage1.Controls.Add(this.buttonCreateFileTask1);
+            this.tabPage1.Controls.Add(this.textBoxTitleFile);
+            this.tabPage1.Controls.Add(this.buttonCreateFolderTask1);
+            this.tabPage1.Controls.Add(this.textBoxTitleFolder);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -57,6 +70,61 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Задание 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonFindSum
+            // 
+            this.buttonFindSum.Location = new System.Drawing.Point(152, 99);
+            this.buttonFindSum.Name = "buttonFindSum";
+            this.buttonFindSum.Size = new System.Drawing.Size(149, 36);
+            this.buttonFindSum.TabIndex = 7;
+            this.buttonFindSum.Text = "Найти сумму файла";
+            this.buttonFindSum.UseVisualStyleBackColor = true;
+            this.buttonFindSum.Click += new System.EventHandler(this.buttonFindSum_Click);
+            // 
+            // textBoxResultTask1
+            // 
+            this.textBoxResultTask1.Location = new System.Drawing.Point(9, 102);
+            this.textBoxResultTask1.Multiline = true;
+            this.textBoxResultTask1.Name = "textBoxResultTask1";
+            this.textBoxResultTask1.ReadOnly = true;
+            this.textBoxResultTask1.Size = new System.Drawing.Size(137, 33);
+            this.textBoxResultTask1.TabIndex = 6;
+            // 
+            // buttonCreateFileTask1
+            // 
+            this.buttonCreateFileTask1.Location = new System.Drawing.Point(152, 57);
+            this.buttonCreateFileTask1.Name = "buttonCreateFileTask1";
+            this.buttonCreateFileTask1.Size = new System.Drawing.Size(119, 36);
+            this.buttonCreateFileTask1.TabIndex = 5;
+            this.buttonCreateFileTask1.Text = "Создать файл";
+            this.buttonCreateFileTask1.UseVisualStyleBackColor = true;
+            this.buttonCreateFileTask1.Click += new System.EventHandler(this.buttonCreateFileTask1_Click);
+            // 
+            // textBoxTitleFile
+            // 
+            this.textBoxTitleFile.Location = new System.Drawing.Point(8, 57);
+            this.textBoxTitleFile.Multiline = true;
+            this.textBoxTitleFile.Name = "textBoxTitleFile";
+            this.textBoxTitleFile.Size = new System.Drawing.Size(138, 36);
+            this.textBoxTitleFile.TabIndex = 4;
+            // 
+            // buttonCreateFolderTask1
+            // 
+            this.buttonCreateFolderTask1.Location = new System.Drawing.Point(152, 15);
+            this.buttonCreateFolderTask1.Name = "buttonCreateFolderTask1";
+            this.buttonCreateFolderTask1.Size = new System.Drawing.Size(119, 36);
+            this.buttonCreateFolderTask1.TabIndex = 3;
+            this.buttonCreateFolderTask1.Text = "Создать папку";
+            this.buttonCreateFolderTask1.UseVisualStyleBackColor = true;
+            this.buttonCreateFolderTask1.Click += new System.EventHandler(this.buttonCreateFolderTask1_Click);
+            // 
+            // textBoxTitleFolder
+            // 
+            this.textBoxTitleFolder.Location = new System.Drawing.Point(8, 15);
+            this.textBoxTitleFolder.Multiline = true;
+            this.textBoxTitleFolder.Name = "textBoxTitleFolder";
+            this.textBoxTitleFolder.Size = new System.Drawing.Size(138, 36);
+            this.textBoxTitleFolder.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -95,6 +163,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +176,11 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
+        private Button buttonCreateFileTask1;
+        private TextBox textBoxTitleFile;
+        private Button buttonCreateFolderTask1;
+        private TextBox textBoxTitleFolder;
+        private Button buttonFindSum;
+        private TextBox textBoxResultTask1;
     }
 }
