@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab8-winform", "lab8-winfor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab9-winform", "lab9-winform\lab9-winform.csproj", "{08B79A05-B705-4C77-A29F-06A976E1CD18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab10-winform", "lab10-winform\lab10-winform.csproj", "{F52DA832-53B3-4F6A-B047-CCBE1C5A7B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{08B79A05-B705-4C77-A29F-06A976E1CD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08B79A05-B705-4C77-A29F-06A976E1CD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08B79A05-B705-4C77-A29F-06A976E1CD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52DA832-53B3-4F6A-B047-CCBE1C5A7B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52DA832-53B3-4F6A-B047-CCBE1C5A7B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52DA832-53B3-4F6A-B047-CCBE1C5A7B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52DA832-53B3-4F6A-B047-CCBE1C5A7B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
